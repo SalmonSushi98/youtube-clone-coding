@@ -1,14 +1,15 @@
-const titleArea__mid = document.querySelector('div.titleArea__mid')
+const arrow = document.querySelector('div.titleArea__mid__right')
 const downArow = document.querySelectorAll('div.titleArea__mid__right i')[1]
 const upArow = document.querySelectorAll('div.titleArea__mid__right i')[0]
+const videoInfo = document.querySelector('.videoInfo__invisible')
 
-titleArea__mid.addEventListener('click', () => {
+arrow.addEventListener('click', () => {
   if ( upArow.style.display == 'block' ) {
-    document.querySelector('.videoInfo').style.display = 'none'
+    videoInfo.className = 'videoInfo__invisible'
     upArow.style.display = 'none'
     downArow.style.display = 'block'
   } else {
-    document.querySelector('.videoInfo').style.display = 'block'
+    videoInfo.className = 'videoInfo__visible'
     downArow.style.display = 'none'
     upArow.style.display = 'block'
   }

@@ -130,19 +130,24 @@ body {
 	line-height: 2.2rem;
 }
 
-.videoInfo {
+.videoInfo__invisible {
 	font-size: 0.8rem;
 	display: none;
 }
 
-.videoInfo div {
+.videoInfo__invisible div, .videoInfo__visible div {
 	padding: 0.5rem 1rem;
 	border-bottom: 1px solid gray;
 }
 
-.videoInfo a {
+.videoInfo__invisible a, .videoInfo__visible a {
 	text-decoration: none;
 	color: rgb(6, 95, 212);
+}
+
+.videoInfo__visible {
+	font-size: 0.8rem;
+	display: block;
 }
 
 .nextVideo {
@@ -192,7 +197,7 @@ body {
 	justify-content: space-between;
 }
 
-@media screen and (min-width: 680px) {
+@media screen and (min-width: 600px) {
 	.top {
 		position: static
 	}
@@ -226,7 +231,7 @@ body {
 	}
 }
 
-@media screen and (min-width: 999px) {
+@media screen and (min-width: 768px) {
 	body {
 		display: flex;
 		justify-content: flex-end;
@@ -242,6 +247,14 @@ body {
 
 	.videoArea {
 		height: 34vw;
+	}
+
+	.titleArea__mid__right {
+		display: none;
+	}
+
+	.videoInfo__invisible, .videoInfo__visible {
+		display: block;
 	}
 
 	.nextVideo__content {
