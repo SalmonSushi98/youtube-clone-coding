@@ -2,16 +2,13 @@ body {
 	margin: 0;
 }
 
-.top {
-	position: sticky; top: 0;
-	z-index: 3;
-}
-
 .header {
 	background-color: #000000;
 	padding: 0.5rem;
 	font-size: 1.7rem;
 	color: white;
+	position: sticky; top: 0;
+	z-index: 3;
 	display: flex;
 	justify-content: space-between;
 }
@@ -112,7 +109,6 @@ body {
 	width: 36px;
 	float: left;
 	position: relative;
-	top: 0.1rem;
 }
 
 .channelInfo__channel span {
@@ -174,7 +170,7 @@ body {
 }
 
 .nextVideo__content__bottom {
-	padding-top: 0.5rem;
+	padding-top: 1rem;
 }
 
 .nextVideo__content__bottom__thumbnail img {
@@ -197,15 +193,11 @@ body {
 	justify-content: space-between;
 }
 
+.nextVideo__content__bottom__link__info i {
+	cursor: pointer;
+}
+
 @media screen and (min-width: 600px) {
-	.top {
-		position: static
-	}
-
-	.header {
-		position: sticky; top: 0;
-	}
-
 	.nextVideo__content__bottom {
 		display: flex;
 	}
@@ -232,17 +224,8 @@ body {
 }
 
 @media screen and (min-width: 768px) {
-	body {
+	.container {
 		display: flex;
-		justify-content: flex-end;
-	}
-
-	.pc__left {
-		width: 100%;
-	}
-
-	.header__right i {
-		display: none;
 	}
 
 	.videoArea {
